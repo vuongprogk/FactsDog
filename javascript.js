@@ -1,6 +1,5 @@
 let factElement = document.getElementById("fact");
 const ENDPOINT = "https://dogapi.dog/api/v1/facts";
-document.addEventListener("DOMContentLoaded", getFact);
 
 async function getFact() {
   let fact = await fetch(ENDPOINT);
@@ -14,3 +13,4 @@ async function getFact() {
 function display(value) {
   factElement.textContent = value;
 }
+document.onload = getFact();
